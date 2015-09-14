@@ -1,7 +1,7 @@
 ### Maintainer: flier[@techfak.uni-bielefeld.de] ###
 
 cmake_minimum_required(VERSION 2.8)
-PROJECT(fsmt-experiments-morse-CNM-1.2.1)
+PROJECT(robobench-experiments-morse-CNM-1.2.1-profile)
 SET(CMAKE_BUILD_TYPE distribution)
 
 MESSAGE("-- You are building on: ${CMAKE_SYSTEM_NAME}")
@@ -19,7 +19,6 @@ INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/tools/mouse_script.py"    DESTINAT
 INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/tools/cat_mouse_game.py"  DESTINATION ${PREFIX}/bin/)
 INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/tools/assess_cat_log.sh"  DESTINATION ${PREFIX}/bin/)
 INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/../operf_script.sh"    DESTINATION ${PREFIX}/bin/)
-INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/morse-CNM-1.2.1.ini"      DESTINATION ${PREFIX}/etc/fsmt-experiments/morse-CNM-1.2.1/)
-INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/morse-CNM-1.2.1.scxml"    DESTINATION ${PREFIX}/etc/fsmt-experiments/morse-CNM-1.2.1/)
+INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/morse-profile-CNM-1.2.1.ini"      DESTINATION ${PREFIX}/etc/robobench-experiments/morse-CNM-1.2.1/)
 
 
