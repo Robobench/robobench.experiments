@@ -1,0 +1,6 @@
+image: willowgarage3_50mm.png
+resolution: 0.05
+origin: [0, -.846, 0]
+occupied_thresh: 0.6
+free_thresh: 0.5
+negate: 0

@@ -1,0 +1,32 @@
+<launch>
+
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="gazebo_debug" default="false" />
+  <arg name="gazebo_user_prefix" default=""/>
+  <arg name="map_offset_x" default="0"/>
+  <arg name="map_offset_y" default="0"/>
+  <arg name="map_offset_yaw" default="0"/>
+  <arg name="map_file" default=""/>
+
+
+  <!-- set use_sim_time flag -->
+  <group if="$(arg use_sim_time)">
+    <param name="/use_sim_time" value="true" />
+  </group>
+
+  <arg if="$(arg gazebo_debug)" name="gazebo_prefix" value="xterm -e gdb -ex run --args"/>
+  <arg unless="$(arg gazebo_debug)" name="gazebo_prefix" value="$(arg gazebo_user_prefix)"/>
+
+
+      <node name="gazebo" pkg="gazebo" type="gazebo" args="-u $(find gazebo)/gazebo/share/gazebo-1.5/worlds/empty.world" respawn="false" output="screen" launch-prefix="$(arg gazebo_prefix)" if="$(arg paused)"/>
+      <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find gazebo)/gazebo/share/gazebo-1.5/worlds/empty.world" respawn="false" output="screen" launch-prefix="$(arg gazebo_prefix)" unless="$(arg paused)"/>
+      <node name="spawn_collada_model" pkg="gazebo" type="spawn_model" args="-urdf -file $(arg map_file) -model wg_map -x $(arg map_offset_x) -y $(arg map_offset_y) -Y $(arg map_offset_yaw)" />
+
+  <!-- start gui -->
+  <group if="$(arg gui)">
+    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>
+  </group>
+
+</launch>
