@@ -1,0 +1,29 @@
+header: 
+  seq: 0
+  stamp: 
+    secs: 29
+    nsecs: 359000000
+  frame_id: ''
+goal_id: 
+  stamp: 
+    secs: 29
+    nsecs: 359000000
+  id: /pr2_marker_control_transparent-3-29.359000000
+goal: 
+  target_pose: 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 29
+        nsecs: 359000000
+      frame_id: map
+    pose: 
+      position: 
+        x: 26.0133698267
+        y: 11.1803539382
+        z: 0.0510125102539
+      orientation: 
+        x: -1.28326037067e-06
+        y: 1.07481771942e-06
+        z: 0.705412507114
+        w: 0.708797005358
