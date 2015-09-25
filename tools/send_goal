@@ -24,6 +24,8 @@ def main():
                       dest="topicname", default=None)
     parser.add_option("-r",
                        dest="responsetopic", default=None)
+    parser.add_option("-c",
+                       dest="condition", default='')
     parser.add_option("--topic-type",
                       dest="topictype", default=None)
 
@@ -57,9 +59,18 @@ def main():
 
     if options.responsetopic:
         subtype, responsetopic, fn = rostopic.get_topic_class(options.responsetopic, False)
-        msg = rospy.wait_for_message(options.responsetopic, subtype, options.timeout)
-    print(msg)
-
+        try:
+            msg = rospy.wait_for_message(options.responsetopic, subtype, options.timeout)
+        except:
+            print("Failed to recieve message")
+            return
+    if not options.condition:
+        print(msg)
+    else:
+        if eval(condition):
+            print("status: Succeeded")
+        else:
+            print("status: Failed")
 
 if __name__ == "__main__":
     main()
