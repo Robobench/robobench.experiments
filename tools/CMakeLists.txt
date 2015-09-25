@@ -15,3 +15,4 @@ ENDIF()
 
 ### Glob, then install the files ###
 INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/operf_script.bash"      DESTINATION ${PREFIX}/bin/)
+INSTALL(PROGRAMS "${CMAKE_CURRENT_SOURCE_DIR}/send_goal"      DESTINATION ${PREFIX}/bin/)
