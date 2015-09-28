@@ -17,7 +17,7 @@ SET(DATA_DIR "${PREFIX}/etc/robobench-experiments/tum-simulation/")
 
 ### Glob, then install the files ###
 INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/data/"  DESTINATION ${DATA_DIR})
-INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/script/"  DESTINATION ${PREFIX}/bin )
+INSTALL(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/scripts/"  DESTINATION ${PREFIX}/bin )
 INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/tum-ardrone-profile.ini" DESTINATION ${DATA_DIR})
 
 
