@@ -1,0 +1,13 @@
+header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+goal_id:
+  stamp:
+    nsecs: 0
+    secs: 0
+  id: ""
+goal:
+  tuck_left: 0
+  tuck_right: 0

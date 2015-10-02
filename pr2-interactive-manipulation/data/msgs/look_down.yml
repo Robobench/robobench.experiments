@@ -1,0 +1,32 @@
+header: 
+  seq: 0
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+goal_id: 
+  stamp: 
+    secs: 0
+    nsecs: 0
+  id: /interactive_manipulation_backend_node-1-670.601000000
+goal: 
+  target: 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 0
+        nsecs: 0
+      frame_id: /odom_combined
+    point: 
+      x: 0.791470825672
+      y: 0.00127696990967
+      z: 0.050320148468
+  pointing_axis: 
+    x: 0.0
+    y: 0.0
+    z: 1.0
+  pointing_frame: /narrow_stereo_optical_frame
+  min_duration: 
+    secs: 0
+    nsecs: 50000000
+  max_velocity: 1.0

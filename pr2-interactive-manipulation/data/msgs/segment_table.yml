@@ -1,0 +1,14 @@
+header: 
+  seq: 4
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+goal_id: 
+  stamp: 
+    secs: 0
+    nsecs: 0
+  id: /rviz_1_0960d46effe4_12372_7879804956869206815-5-1537.895000000
+goal: 
+  request: 1
+  interactive: False

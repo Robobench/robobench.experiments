@@ -1,0 +1,26 @@
+header: 
+  seq: 7
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: /odom_combined
+client_id: /rviz_1_0960d46effe4_12372_7879804956869206815/Pick Up Objects
+marker_name: object_0
+control_name: ''
+event_type: 2
+pose: 
+  position: 
+    x: -0.000333377422066
+    y: -5.8095561144e-06
+    z: 0.0509999990463
+  orientation: 
+    x: 9.56668941399e-07
+    y: -7.85846423241e-05
+    z: 0.00995626207441
+    w: 0.999950408936
+menu_entry_id: 3
+mouse_point: 
+  x: 0.678406357765
+  y: 0.0540013313293
+  z: 0.613928437233
+mouse_point_valid: True
