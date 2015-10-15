@@ -13,10 +13,16 @@ IF (CMAKE_INSTALL_PREFIX)
     MESSAGE("-- Found install PREFIX: " ${PREFIX})
 ENDIF()
 
-SET(DATA_DIR "${PREFIX}/etc/robobench-experiments/moos-ivp-m2-berta/")
+SET(DATA_DIR "${PREFIX}/etc/robobench-experiments/moos-ivp-m2-berta")
 
 ### Glob, then install the files ###
+FILE(GLOB macro_files "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.moos" "${CMAKE_CURRENT_SOURCE_DIR}/missions/*.bhv")
+FILE(GLOB script_files "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.sh")
+
+
 INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/moos-ivp-m2-berta.ini" DESTINATION ${DATA_DIR})
+INSTALL(FILES ${macro_files} DESTINATION ${DATA_DIR}/missions/m2_berta/)
+INSTALL(PROGRAMS ${script_files} DESTINATION ${DATA_DIR}/missions/m2_berta/)
 
 
 
