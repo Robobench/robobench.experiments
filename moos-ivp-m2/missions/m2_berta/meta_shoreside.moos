@@ -209,7 +209,7 @@ ProcessConfig = uTimerScript
   paused     = false
   reset_max  = unlimited
   reset_time = end
-
+  
   randvar = varname=X1, min=-25,  max=25,  key=at_reset
   randvar = varname=Y1, min=-100, max=-50, key=at_reset
 
@@ -220,6 +220,11 @@ ProcessConfig = uTimerScript
 
   event = var=UP_LOITER_1, val="center_assign=$[X1],$[Y1]", time=360
   event = var=UP_LOITER_2, val="center_assign=$[X2],$[Y2]", time=360
+
+  event = var=DEPLOY_ALL, val="true", time=10
+  event = var=RETURN_ALL, val="false", time=10
+  event = var=MOOS_MANUAL_OVERIDE_ALL, val="false", time=10
+  event = var=AVOID_ALL, val="true", time=10
 }
 
 
