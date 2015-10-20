@@ -16,7 +16,7 @@ ENDIF()
 SET(DATA_DIR "${PREFIX}/etc/robobench-experiments/moos-ivp-m2-berta")
 
 ### Glob, then install the files ###
-FILE(GLOB macro_files "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.moos" "${CMAKE_CURRENT_SOURCE_DIR}/missions/*.bhv")
+FILE(GLOB macro_files "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.moos" "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.bhv")
 FILE(GLOB script_files "${CMAKE_CURRENT_SOURCE_DIR}/missions/m2_berta/*.sh")
 
 
